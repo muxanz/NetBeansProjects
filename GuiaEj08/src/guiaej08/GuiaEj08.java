@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package guiaej08;
-
+import java.util.Scanner;
 /**
  *
  * @author muxan
@@ -16,6 +16,17 @@ public class GuiaEj08 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Scanner read = new Scanner(System.in);
+        System.out.print("Ingrese la nota 0 - 10: ");
+        int nota = read.nextInt();
+        
+        while (nota < 0 || nota > 10) {            
+            System.out.print("Ingrese la nota 0 - 10: ");
+            nota = read.nextInt();
+        }
+        
+        System.out.println("Nota ingresada es: " + nota);
     }
     
 }
+
